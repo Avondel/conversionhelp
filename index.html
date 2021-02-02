@@ -1,5 +1,12 @@
 <!DOCTYPE HTML>
 <html>
+	<style>
+		.underline_text {
+			border-bottom: solid 2px #000000;
+			display: inline;
+			padding-bottom: 3px;
+		}
+	</style>
    <head>
       <script type = "text/javascript">
      		//start/end is for the computer top/bottom is for the user
@@ -244,8 +251,9 @@
 				<label id="Step3"><output> &nbsp </output> </label>
 				<big> * </big></big></big></td>
 				<td>				
-					<big><big><u>
-					<label id='Factor1'><output name = "displayTop"> &nbsp </output></label></u> &nbsp &nbsp =<br>
+					<big><big>
+					<label id='Factor1' style="border-bottom: solid 2px #000000; padding-bottom: 3px;">
+						<output name = "displayTop"> &nbsp </output></label> &nbsp &nbsp =<br>
 					<label id='Factor2'><output name = "displayBottom"> &nbsp </output> </label/></big></big><br><br>
 					<input type = "button" value = "Flip" onclick = "Flip();" /></td>
 			</tr><tr>
