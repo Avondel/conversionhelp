@@ -113,6 +113,12 @@
 				msg = "\bExample:\nConvert 3.2 centimeters to Inches.\n\nLook up the relation between centimeters and inches. \n\nCentimeters: 2.54 \nInches: 1";
 				alert(msg);
 			}
+
+			function Ex3() {
+				msg = "";
+				msg = "Calculate 3.2 cm times 1 inch divide by 2.54 cm. \n\nEnter:\n3.2 * 1 / 2.54 = ";
+				alert(msg);
+			}
 			
 			function Check() {
 				//Is everything filled in?
@@ -229,8 +235,7 @@
    <body onload = "initiate()">
 	<!-- start/end is computer. top/bottom is for the user. /!-->
 		
-		<center><h2>Unit Conversion Helper</h2>
-		<p>This is intended for single step unit conversion problems.</p>
+		<center><h2>Unit Conversion Helper for Single-Step Problems</h2>
 				
 		<form action = "/cgi-bin/html5.cgi" method = "get" name = "myform" >		
 		<table border = "1">
@@ -239,8 +244,8 @@
 					<h3>Step 1: Read the problem and note what units you are working with.</h3>
 						Starting Units : <input type = "text" name = "startUnitForm" onblur = "labelUpdate()" required /> &nbsp 
 						Ending Units: <input type = "text" name = "endUnitForm" onblur = "labelUpdate()" required /> &nbsp &nbsp
-						<input type = "button" value = "Example" onclick = "Ex1();" /> <br><br>
-						<p>(Hint: If you are having difficulty, please read the problem and note the units used.</p>
+						<input type = "button" value = "Example" onclick = "Ex1();" /> <br>
+						<p>Hint: If you are having difficulty, please read the problem and note the units used.</p>
 				</td>
 			</tr><tr>
 				<td>		<h3>Step 2: Set up the conversion factor</h3>
@@ -249,16 +254,17 @@
 			<big> &nbsp = &nbsp </big>
 			<input type = "text" name = "bottomNumForm" onblur = labelUpdate() required />
 					<label id="Step2b"><output> &nbsp &nbsp</output> </label>
-			<input type = "button" value = "Example" onclick = "Ex2();" /> <br><br>
-			<p>If you are having difficulty, the information is usually in the back of your physics or chemistry book.</p>
-		<br></td>
+			<input type = "button" value = "Example" onclick = "Ex2();" /> <br>
+			<p>Hint: This information is usually in the back of your physics or chemistry book.</p></td>
 			</tr></table>
 		<table border = "2">
 			<tr>
 				<td colspan = "3">				<h3>Step 3: Solve</h3>
-				<p>Enter the starting number in the first box and fill in the others from the Drop Down Boxes.<br>
-					Then, multiply the numbers on the top and divide by the number on the bottom<br>
-					Click "Check Work" to see if you agree with the machine.</p></td>
+				<p>Enter the starting number in the first box and then flip the conversion factor so your units cancel.<br>
+					Multiply the numbers on top and divide by the number on the bottom.<br> 
+					Click "Check Work" to see if you agree with the machine.<br>
+					If you are having trouble with the calculator, click here:
+					<input type = "button" value = "Calculator Help" onclick = "Ex3();" /><br></p></td>
 			</tr><tr>
 				<td><input type = "text" name = "numberStartForm" required />
 				<big><big>
