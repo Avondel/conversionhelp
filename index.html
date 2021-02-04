@@ -102,6 +102,18 @@
 			
 			}
 			
+			function Ex1() {
+				msg = "";
+				msg = "\bExample:\nConvert 3.2 centimeters to inches.\n\nStart: Centimeters \nEnd:  Inches";
+				alert(msg);
+			}
+
+			function Ex2() {
+				msg = "";
+				msg = "\bExample:\nConvert 3.2 centimeters to Inches.\n\nLook up the relation between centimeters and inches. \n\nCentimeters: 2.54 \nInches: 1";
+				alert(msg);
+			}
+			
 			function Check() {
 				//Is everything filled in?
 				flag = 0;
@@ -217,7 +229,7 @@
    <body onload = "initiate()">
 	<!-- start/end is computer. top/bottom is for the user. /!-->
 		
-		<center><h2>Unit Conversion Helper</h2></center>
+		<center><h2>Unit Conversion Helper</h2>
 		<p>This is intended for single step unit conversion problems.</p>
 				
 		<form action = "/cgi-bin/html5.cgi" method = "get" name = "myform" >		
@@ -226,7 +238,8 @@
 				<td>		<p id="Step1"></p>
 					<h3>Step 1: Read the problem and note what units you are working with.</h3>
 						Starting Units : <input type = "text" name = "startUnitForm" onblur = "labelUpdate()" required /> &nbsp 
-						Ending Units: <input type = "text" name = "endUnitForm" onblur = "labelUpdate()" required /><br><br>
+						Ending Units: <input type = "text" name = "endUnitForm" onblur = "labelUpdate()" required /> &nbsp &nbsp
+						<input type = "button" value = "Example" onclick = "Ex1();" /> <br><br>
 						<p>(Hint: If you are having difficulty, please read the problem and note the units used.</p>
 				</td>
 			</tr><tr>
@@ -235,7 +248,8 @@
 					<label id="Step2a"><output> &nbsp </output> </label>
 			<big> &nbsp = &nbsp </big>
 			<input type = "text" name = "bottomNumForm" onblur = labelUpdate() required />
-					<label id="Step2b"><output> &nbsp </output> </label>
+					<label id="Step2b"><output> &nbsp &nbsp</output> </label>
+			<input type = "button" value = "Example" onclick = "Ex2();" /> <br><br>
 			<p>If you are having difficulty, the information is usually in the back of your physics or chemistry book.</p>
 		<br></td>
 			</tr></table>
@@ -264,6 +278,6 @@
 		</table>
 		
 		</form>
-
+		</center>	
    </body>
 </html>
